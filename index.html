@@ -84,6 +84,198 @@
                 <div id="emptyMusicMessage" class="empty-message"hidden><span>@</span><h3>Still dry...</h3>
                 <p>Add somes songs to get wet...</p></div>
             </section>
+            <section class="now-playing-section">
+                <div class="now-playing-card">
+                    <div class="album-placeholder">@</div>
+                    <div class="now-playing-info">
+                        <p>Currently playing</p>
+                        <h2 id="currentSong">Nothing playing yet</h2>
+                        <p id="currentArtist">Pick a song from your universe</p>
+                    </div>
+                    <div class="player-controls">
+                        <button id="previousButton">#</button>
+                        <button id="playButton">@</button>
+                        <button id="nextButton">@</button>
+                    </div>
+                </div>
+            </section>
+            <section id="artists" class="artists-section">
+                <div class="section-heading">
+                    <p class="small-heading">People behind the music</p>
+                    <h2>Artists I keep coming back too</h2>
+                    <p>Voices that speak to me</p>
+                </div>
+                <div id="artistList" class="artist-list"></div>
+            </section>
+            <section class="ablums-section">
+                <div class="section-heading">
+                    <p class="small-heading">Albums</p>
+                    <h2>Albums on repeat</h2>
+                    <p>The albums I can't skip</p>
+                </div>
+                <div id="albumList" class="album-list"></div>
+            </section>
+            <section id="moods" class="moods-section">
+                <div class="section-heading">
+                    <p class="small-heading">Depending on the mood...</p>
+                    <h2>What are you feeling?</h2>
+                    <p>Every mood needs its own soundtrack</p>
+                </div>
+                <div class="mood-grid">
+                    <button class="mood-card" data-mood="happy">
+                        <span>#</span>
+                        <h3>Happy</h3>
+                        <p>Just wanna dance</p>
+                    </button>
+                    <button class="mood-card" data-mood="sad">
+                        <span>#</span>
+                        <h3>Sad</h3>
+                        <p>Didn't even give the day a chance</p>
+                    </button>
+                    <button class="mood-card" data-mood="late-night">
+                        <span>#</span>
+                        <h3>Alone at night</h3>
+                        <p>Just me and my earphone</p>
+                    </button>
+                    <button class="mood-card" data-mood="study">
+                        <span>#</span>
+                        <h3>Study</h3>
+                        <p>Fighting for a degree i don't want...</p>
+                    </button>
+                    <button class="mood-card" data-mood="romantic">
+                        <span>#</span>
+                        <h3>Love-sick</h3>
+                        <p>A playlist for you</p>
+                    </button>
+                    <button class="mood-card" data-mood="mainCharacter">
+                        <span>#</span>
+                        <h3>Main-Character</h3>
+                        <p>Dance in my underwear</p>
+                    </button>
+                </div>
+            </section>
+            <section class="late-night-section">
+                <div class="late-night-content">
+                    <p class="small-heading">Lights Out</p>
+                    <h2>Light-night music</h2>
+                    <p>Songs for a late night drive (dont have a car) at 1AM</p>
+                    <button id="latenightButton" class="primary-button">Get the car ready</button>
+                </div>
+            </section>
+            <section class="study-section">
+                <div class="section-heading">
+                    <p class="small-heading">Study corner</p>
+                    <h2>Trying to work here</h2>
+                    <p>For all the things that are gonna end me </p>
+                    <div id="studyPlaylist" class="study-playlist"></div>
+                </div>
+            </section>
+            <section class="favorite-section">
+                <div class="section-heading">
+                    <p class="small-heading">Little favorites</p>
+                    <h2>Always come for them </h2>
+                    <p>Songs that are always gonna be in the playlist</p>
+                </div>
+                <div id="favoriteSongs" class="favorite-songs"></div>
+                    <div id="noFavorite" class="empty-message">
+                        <span>@</span>
+                        <h3>No favorites yet</h3>
+                        <p>Your favorites well appear here</p>
+                </div>
+            </section>
+            <section class="add-music-section">
+                <div class="section-heading">
+                    <p class="small-heading">
+                        Make it your universe
+                    </p>
+                    <h2>Add a song</h2>
+                    <p>Give the song a home here</p>
+                </div>
+                <form id="musicForm">
+                    <div class="form-group">
+                        <label for="songTitle">Song Title</label>
+                        <input type="text" id="songTitle" placeholder="e.g Ivy" required>
+                    </div>
+                     <div class="form-group">
+                        <label for="songArtist">Artist</label>
+                        <input type="text" id="songArtist" placeholder="e.g Frank Ocean" required>
+                    </div>
+                     <div class="form-group">
+                        <label for="albumName">Album</label>
+                        <input type="text" id="albumName" placeholder="e.g Blond" required>
+                    </div>
+                     <div class="form-group">
+                        <label for="songGenre">Genre</label>
+                        <select id="songGenre">
+                            <option value="R&B">R&B</option>
+                            <option value="Rap">Rap</option>
+                            <option value="Pop">Pop</option>
+                            <option value="Alternative">Alternative</option>
+                            <option value="Indie">Indie</option>
+                            <option value="TKop">TKop</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="songMood">Mood</label>
+                        <select id="songMood">
+                            <option value="happy">Happy</option>
+                            <option value="sad">Sad</option>
+                            <option value="late-night">Alone at night</option>
+                            <option value="study">Study</option>
+                            <option value="romantic">Love-sick</option>
+                            <option value="mainCharacter">Main Character</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="songRatinf">Rating</label>
+                        <select id="songRating">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                    </div>
+                    <div class="form-group checkbox-group">
+                        <label>
+                            <input type="checkbox" id="songFavorite">
+                            Add to Favorites
+                        </label>
+                    </div>
+                    <button type="submit" class="primary-button">Add Song</button>
+                </form>
+            </section>
+            <section id="about" class="about-section">
+                <div class="about-content">
+                    <p class="small-heading">
+                        About this litte corner
+                    </p>
+                    <h2>Music makes everything a little more interesting</h2>
+                    <p>This is a little personal collection of music thats has a part of me</p>
+                    <p>Everything need a background music and this is my soundrack</p>
+                    <p class="signature">- Sarah</p>
+                </div>
+            </section>
         </main>
+        <footer>
+            <p>Made with music and a headache</p>
+            <p>~ 2026 Sarah's Music Universe</p>
+        </footer>
+        <div id="songModal" class="modal"hidden>
+            <div class="modal-content">
+                <button id="closeSongModal" class="close-modal">x</button>
+                <div class="modal-album">@</div>
+                <div class="modal-song-info">
+                    <p>song detail</p>
+                    <h2 id="modalSongTitle">Song Title</h2>
+                    <p id="modalSongArtist">Artist</p>
+                    <p id="modalSongAlbum">Album</p>
+                    <p id="modalSongGenre">Genre</p>
+                    <p id="modalSongMood">Mood</p>
+                    <p id="modalSongRating">Rating</p>
+                </div>
+            </div>
+        </div>
+        <script src="script.js"></script>
     </body>
 </html>
