@@ -500,7 +500,7 @@ mood-card {
     opacity: 0.8;
 }
 .mood-card:hover {
-    background: #420200;
+    background: #C68E91;
     border-color: #C68E91;
     transform: translateY(-4px);
 }
@@ -759,6 +759,367 @@ footer p {
     line-height: 1.6;
 }
 
+@media (max-width: 900px) {
+
+    /* GENERAL */
+
+    .hero,
+    .music-section,
+    .artists-section,
+    .ablums-section,
+    .moods-section,
+    .study-section,
+    .favorite-section,
+    .add-music-section,
+    .about-section,
+    .late-night-section {
+        width: 90%;
+    }
+
+    /* NAVIGATION */
+
+    header {
+        padding: 20px 5%;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    /* HERO */
+
+    .hero {
+        padding: 55px 6%;
+        min-height: 50vh;
+    }
+
+    .hero h1 {
+        font-size: clamp(2.8rem, 7vw, 4.5rem);
+    }
+
+    /* STATISTICS */
+
+    .music-stats {
+        width: 90%;
+    }
+
+    /* NOW PLAYING */
+
+    .now-playing-card {
+        gap: 18px;
+    }
+
+    /* GRIDS */
+
+    .artist-list,
+    .album-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    /* NAVIGATION */
+
+    header {
+        padding: 20px 6%;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .nav-links {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px 18px;
+    }
+
+    .nav-links a {
+        font-size: 0.8rem;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        width: 90%;
+        min-height: auto;
+        margin: 20px auto 50px;
+        padding: 50px 6%;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero h1 {
+        font-size: clamp(2.5rem, 10vw, 3.5rem);
+        letter-spacing: -2px;
+    }
+
+    .hero-description {
+        font-size: 0.95rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-buttons a,
+    .hero-buttons button {
+        width: 100%;
+        max-width: 260px;
+    }
+
+
+    /* STATISTICS */
+
+    .music-stats {
+        width: 90%;
+        grid-template-columns: repeat(2, 1fr);
+        margin-bottom: 60px;
+    }
+
+    .stat-card {
+        padding: 25px 10px;
+    }
+
+    .stat-card:nth-child(2)::after {
+        display: none;
+    }
+
+    .stat-card:nth-child(-n+2) {
+        border-bottom: 1px solid rgba(66, 2, 0, 0.25);
+    }
+
+    .stat-card h2 {
+        font-size: 2rem;
+    }
+
+
+    /* GENERAL SECTION SPACING */
+
+    .music-section,
+    .artists-section,
+    .ablums-section,
+    .moods-section,
+    .study-section,
+    .favorite-section,
+    .add-music-section {
+        width: 90%;
+        padding: 45px 6%;
+        margin: 25px auto 55px;
+    }
+
+    .section-heading {
+        margin-bottom: 30px;
+    }
+
+
+    /* MUSIC COLLECTION */
+
+    .music-controls {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .search-box {
+        width: 100%;
+    }
+
+    .search-box input {
+        width: 100%;
+    }
+
+    .filter-buttons {
+        gap: 8px;
+    }
+
+    .filter-button {
+        padding: 8px 11px;
+        font-size: 0.8rem;
+    }
+
+    .song-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
+    }
+
+
+    /* NOW PLAYING */
+
+    .now-playing-section {
+        padding: 25px 7% 55px;
+    }
+
+    .now-playing-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 25px 18px;
+    }
+
+    .album-placeholder {
+        width: 110px;
+        height: 110px;
+    }
+
+    .now-playing-info h2 {
+        font-size: 1.3rem;
+    }
+
+    .player-controls {
+        justify-content: center;
+    }
+
+
+    /* ARTISTS AND ALBUMS */
+
+    .artist-list,
+    .album-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
+    }
+
+
+    /* MOODS */
+
+    .mood-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .mood-card {
+        min-height: 150px;
+        padding: 18px 12px;
+    }
+
+    .mood-card h3 {
+        font-size: 1rem;
+    }
+
+
+    /* LATE NIGHT */
+
+    .late-night-section {
+        width: 90%;
+        min-height: 300px;
+        margin: 25px auto 55px;
+        padding: 45px 7%;
+    }
+
+    .late-night-content h2 {
+        font-size: 2.5rem;
+    }
+
+
+    /* STUDY AND FAVORITES */
+
+    .study-playlist {
+        grid-template-columns: 1fr;
+    }
+
+    .favorite-songs {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
+    }
+
+
+    /* ADD A SONG */
+
+    #musicForm {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    #musicForm > button {
+        grid-column: 1;
+        width: 100%;
+    }
+
+
+    /* ABOUT */
+
+    .about-section {
+        width: 90%;
+        padding: 50px 7%;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 25px 7%;
+    }
+
+}
+
+@media (max-width: 420px) {
+
+    /* NAVIGATION */
+
+    .nav-links {
+        gap: 10px 13px;
+    }
+
+    .nav-links a {
+        font-size: 0.75rem;
+    }
+
+
+    /* HERO */
+
+    .hero h1 {
+        font-size: 2.4rem;
+    }
+
+    .hero-buttons a,
+    .hero-buttons button {
+        max-width: 100%;
+    }
+
+
+    /* MUSIC FILTERS */
+
+    .filter-buttons {
+        width: 100%;
+    }
+
+    .filter-button {
+        flex: 1;
+        padding: 9px 5px;
+        font-size: 0.75rem;
+    }
+
+
+    /* MOODS */
+
+    .mood-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .mood-card {
+        min-height: 130px;
+    }
+
+
+    /* SONG, ARTIST AND ALBUM GRIDS */
+
+    .song-list,
+    .artist-list,
+    .album-list,
+    .favorite-songs {
+        grid-template-columns: 1fr;
+    }
+
+}
 
 
 
