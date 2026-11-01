@@ -353,267 +353,324 @@ nav{
 }
 .artists-section .section-heading h2{
     color:#420200;
-    font-size: clamp(2rem, 5vm, 3.5rem);
+    font-size: clamp(2rem, 5vw, 3.5rem);
     font-weight: normal;
     margin: 15px 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media (max-width: 750px) {
-    .navbar{
-        flex-direction: column;
-        gap: 20px;
-    }
-    .nav-links {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
-    }
-    .hero {
-        min-height: auto;
-        flex-direction: column;
-        text-align: center;
-        padding: 80px 7%;
-    }
-    .hero-content {
-        max-width: 100%;
-    }
-    .hero-description {
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .hero-buttons {
-        justify-content: center;
-    }
-    .hero-decoration {
-        margin-top: 20px;
-    }
+.artist-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+    gap: 25px;
 }
+.artist-card {
+    background: #C68E91;
+    padding: 10px;
+    transition: transform 0.2s ease;
+}
+.artist-card:hover {
+    transform: translateY(-5px) rotate(-1deg);
+}
+.artist-card img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    display: block;
+    border: 5px solid #F8F1EA;
+}
+.artist-card h3 {
+    color: #420200;
+    font-size: 1.1rem;
+    font-weight: normal;
+    margin-top: 13px;
+}
+.artist-card p {
+    color: #420200;
+    font-size: 0.85rem;
+    margin-top: 6px;
+    line-height: 1.5;
+}
+
+.ablums-section{
+    width: 86%;
+    margin: 30px auto 80px;
+    padding: 70px 7%;
+    background: #C68E91;
+    border: 1px solid #757626;
+}
+.ablums-section .section-heading{
+    text-align: center;
+    margin-bottom: 45px;
+}
+.ablums-section .small-heading{
+    color: #757626;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+}
+.ablums-section .section-heading h2 {
+    color: #420200;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: normal;
+    margin: 15px 0;
+}
+.ablum-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+    gap: 25px;
+}
+.album-card {
+    padding: 10px;
+    background: #C68E91;
+    transition: transform 0.2s ease;
+}
+.ablum-card:hover{
+    transform: translateY(-5px);
+}
+.album-card img{
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    display: block;
+    border: 5px solid #F8F1EA;
+}
+.album-card h3{
+    color:#420200;
+    font-size: 1.05rem;
+    font-weight: normal;
+    margin-top: 13px;
+}
+.album-card p{
+    color: #420200;
+    font-size: 0.85rem;
+    margin-top: 6px;
+    line-height: 1.5;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
