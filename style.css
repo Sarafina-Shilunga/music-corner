@@ -430,7 +430,7 @@ nav{
     aspect-ratio: 1;
     object-fit: cover;
     display: block;
-    border: 5px solid #F8F1EA;
+    border: 5px solid #757626;
 }
 .album-card h3{
     color:#420200;
@@ -445,12 +445,319 @@ nav{
     line-height: 1.5;
 }
 
+.moods-section {
+    width: 86%;
+    margin: 30px auto 80px;
+    padding: 70px 7%;
+    background: #C68E91;
+    border: 1px solid #757626;
+}
+.moods-section .section-heading{
+    text-align: center;
+    margin-bottom: 45px;
+}
+.moods-section .small-heading{
+    color:#757626;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+}
+.moods-section .section-heading h2 {
+    color: #420200;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: normal;
+    margin: 15px 0;
+}
+.mood-grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 18px;
+}
+mood-card {
+    min-height: 170px;
+    padding: 25px 20px;
+    text-align: left;
+    background: transparent;
+    border: 1px solid #757626;
+    color: #420200;
+    font-family: Georgia, serif;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+.mood-card span {
+    display: block;
+    color: #757626;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+.mood-card h3 {
+    font-size: 1.2rem;
+    font-weight: normal;
+    margin-bottom: 8px;
+}
+.mood-card p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    opacity: 0.8;
+}
+.mood-card:hover {
+    background: #420200;
+    border-color: #C68E91;
+    transform: translateY(-4px);
+}
 
+.late-night-section {
+    width: 86%;
+    min-height: 380px;
+    margin: 30px auto 80px;
+    padding: 70px 8%;
+    background: #420200;
+    color: #757626;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid rgba(66, 2, 0, 0.15);
+}
+.late-night-content {
+    max-width: 650px;
+}
+.late-night-content .small-heading {
+    color: #C68E91;
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+.late-night-content h2 {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: normal;
+    margin: 20px 0;
+}
+.late-night-content > p:not(.small-heading) {
+    color: #757626;
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+.late-night-content .primary-button {
+    background: transparent;
+    color: #757626;
+    border: 1px solid #757626;
+}
+.late-night-content .primary-button:hover {
+    background: #C68E91;
+    color: #420200;
+}
 
+.study-section {
+    width: 86%;
+    margin: 30px auto 80px;
+    padding: 70px 7%;
+    background: #757626;
+    border: 1px solid rgba(66, 2, 0, 0.15);
+}
+.study-section .section-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.study-section .small-heading {
+    color: #C68E91;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+}
+.study-section .section-heading h2 {
+    color: #420200;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: normal;
+    margin: 15px 0;
+}
+.study-section .section-heading > p:not(.small-heading) {
+    color: #420200;
+    line-height: 1.7;
+}
+.study-playlist {
+    margin-top: 35px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
 
+.favorite-section {
+    width: 86%;
+    margin: 30px auto 80px;
+    padding: 70px 7%;
+    background: #F8F1EA;
+    border: 1px solid rgba(66, 2, 0, 0.15);
+}
+.favorite-section .section-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+.favorite-section .small-heading {
+    color: #757626;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+}
+.favorite-section .section-heading h2 {
+    color: #420200;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: normal;
+    margin: 15px 0;
+}
+.favorite-songs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 20px;
+}
+.favorite-section .empty-message {
+    text-align: center;
+    padding: 35px 10px;
+    color: #420200;
+}
+.favorite-section .empty-message span {
+    display: block;
+    color: #757626;
+    font-size: 2rem;
+    margin-bottom: 12px;
+}
+.favorite-section .empty-message h3 {
+    font-size: 1.3rem;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+.favorite-section .empty-message p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
 
+.add-music-section {
+    width: 86%;
+    margin: 30px auto 80px;
+    padding: 70px 7%;
+    background: #F8F1EA;
+    border: 1px solid rgba(66, 2, 0, 0.15);
+}
+.add-music-section .section-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+.add-music-section .small-heading {
+    color: #757626;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+}
+.add-music-section .section-heading h2 {
+    color: #420200;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: normal;
+    margin: 15px 0;
+}
+#musicForm {
+    max-width: 750px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.form-group label {
+    color: #420200;
+    font-size: 0.9rem;
+}
+.form-group input:not([type="checkbox"]),
+.form-group select {
+    width: 100%;
+    padding: 13px;
+    background: transparent;
+    border: 1px solid rgba(66, 2, 0, 0.25);
+    color: #420200;
+    font-family: Georgia, serif;
+    font-size: 0.9rem;
+    outline: none;
+}
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #757626;
+}
+.form-group input::placeholder {
+    color: #9B7774;
+}
+.checkbox-group {
+    justify-content: center;
+}
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+.checkbox-group input {
+    accent-color: #757626;
+    width: 16px;
+    height: 16px;
+}
+#musicForm > button {
+    grid-column: 1 / -1;
+    justify-self: center;
+    min-width: 160px;
+    cursor: pointer;
+}
 
+.about-section {
+    width: 86%;
+    margin: 30px auto 50px;
+    padding: 80px 10%;
+    background: #F8F1EA;
+    border: 1px solid rgba(66, 2, 0, 0.15);
+    text-align: center;
+}
+.about-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+.about-content .small-heading {
+    color: #757626;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+}
+.about-content h2 {
+    color: #420200;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: normal;
+    line-height: 1.2;
+    margin: 20px 0;
+}
+.about-content p:not(.small-heading):not(.signature) {
+    color: #420200;
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 12px;
+}
+.signature {
+    color: #757626;
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 1.3rem;
+    margin-top: 30px;
+}
 
+footer {
+    background: #420200;
+    color: #F8F1EA;
+    padding: 30px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    font-size: 0.85rem;
+}
+footer p {
+    line-height: 1.6;
+}
 
 
 
