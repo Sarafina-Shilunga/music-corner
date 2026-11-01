@@ -51,7 +51,8 @@ const starterSongs = [
         mood: "sad",
         rating: 5,
         favorite: true,
-        dateAdded: "2026-10-20"
+        dateAdded: "2026-10-20",
+        image: "images/Frank Ocean - Blonde album cover expanded.jpg",
     },
     {
         id: 2,
@@ -186,7 +187,6 @@ function escapeHTML(value) {
 
 
 // 7. DISPLAY SONGS
-
 function displaySongs(songArray) {
 
     songList.innerHTML = "";
@@ -201,7 +201,10 @@ function displaySongs(songArray) {
 
         songCard.innerHTML = `
             <div class="song-art">
-                <span>♫</span>
+                <img
+                    src="${escapeHTML(song.image || 'images/default.jpg')}"
+                    alt="${escapeHTML(song.album)} album cover"
+                >
             </div>
 
             <h3>${escapeHTML(song.title)}</h3>
@@ -220,7 +223,7 @@ function displaySongs(songArray) {
                 <button class="favorite-toggle"
                     data-id="${song.id}"
                     aria-label="Toggle favorite">
-                    ${song.favorite ? "♥" : "♡"}
+                    ${song.favorite ? "♥️" : "♡"}
                 </button>
 
             </div>
@@ -230,7 +233,6 @@ function displaySongs(songArray) {
 
     });
 }
-
 
 // 8. SEARCH AND FILTER SONGS
 
